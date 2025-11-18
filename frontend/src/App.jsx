@@ -1,10 +1,13 @@
 import "./App.css";
+import {useEffect, useState} from "react"
 
 function App() {
 	return (
 		<div className="App">
 			{/* TODO: include an icon for the quote book */}
 			<h1>Hack at UCI Tech Deliverable</h1>
+
+
 
 			<h2>Submit a quote</h2>
 			{/* TODO: implement custom form submission logic to not refresh the page */}
