@@ -116,7 +116,7 @@ function App() {
 
 			{/* filter for last week/month/year/all time */}
 			<div className = "filter-row">
-				<label htmlFor = "quote-filter"> Show wuotes from: </label>
+				<label htmlFor = "quote-filter"> Show quotes from: </label>
 				<select
 					id = "quote-filter"
 					value = {maxAgeDays}
