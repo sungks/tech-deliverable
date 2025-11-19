@@ -1,13 +1,34 @@
 import "./App.css";
 import {useEffect, useState} from "react"
 
+const FILTER_OPTIONS = [
+	{label: "Last week", days: 7},
+	{label: "Last month", days: 30},
+	{label: "Last year", days: 365},
+	{label: "All time", days: 0}
+];
+
+//separate component for each quote
+function Quote({name, message, time}){
+	const formattedDate = time ? new Date(time).toLocaleString(): "";
+
+	return(
+		<div className="quote">
+			<p className="quote-message">“{message}”</p>
+			<div className="quote-meta">
+				<span className="quote-name">— {name}</span>
+				{formattedDate && <span className="quote-date">{formattedDate}</span>}
+			</div>
+		</div>
+	);
+}
+
 function App() {
 	return (
 		<div className="App">
-			{/* TODO: include an icon for the quote book */}
 			<h1>Hack at UCI Tech Deliverable</h1>
 
-
+			<img src = "quotebook.png" alt = "Quote book icon" className = "quote-icon"/>
 
 			<h2>Submit a quote</h2>
 			{/* TODO: implement custom form submission logic to not refresh the page */}
